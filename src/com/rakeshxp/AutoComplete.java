@@ -88,7 +88,6 @@ public class AutoComplete {
         String word;
         while((word = reader.readLine()) != null) {
             word = word.trim();
-            System.out.println(word);
             // Add the word if the word does not start with #
             if(!word.isEmpty() && !word.startsWith("#")) {
                 addWord(word);
@@ -103,7 +102,6 @@ public class AutoComplete {
         // word with a * suffix.
         redis.zadd(redisKey, 0, word + "*");
         for(int index = 1, total = word.length(); index < total; index++) {
-            System.out.println(word.substring(0, index));
             redis.zadd(redisKey, 0, word.substring(0, index));
         }
 
