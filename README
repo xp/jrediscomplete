@@ -1,0 +1,4 @@
+Redis based autocomplete in Java
+===
+
+Credits: Salvatore [http://antirez.com/post/autocomplete-with-redis.html](http://antirez.com/post/autocomplete-with-redis.html).
