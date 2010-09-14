@@ -6,3 +6,13 @@ Credits: Salvatore - http://antirez.com/post/autocomplete-with-redis.html
 Dependency
 ===
 1) Java Redis Client - http://github.com/xetorthio/jedis
+
+Usage
+===
+Jedis redis = new Jedis("localhost", 6379);
+URL url = new URL("http://antirez.com/misc/female-names.txt");
+AutoComplete autoComplete = new AutoComplete.Builder(redis, "redisKey", url)
+                                            .clear(true)
+                                            .populate(true)
+                                            .build();
+List<String> results = autoComplete.complete("marcell", 10);
