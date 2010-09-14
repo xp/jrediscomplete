@@ -1,4 +1,8 @@
 Redis based autocomplete in Java
 ===
 
-Credits: Salvatore [http://antirez.com/post/autocomplete-with-redis.html](http://antirez.com/post/autocomplete-with-redis.html).
+Credits: Salvatore - http://antirez.com/post/autocomplete-with-redis.html
+
+Dependency
+===
+1) Java Redis Client - http://github.com/xetorthio/jedis
